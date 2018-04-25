@@ -7,7 +7,7 @@ services:
             - "8080:8080"
         depends_on:
             - db
-            - vue-client
+            - react-client
             - grpc-client
             - grpc-server
             - javascript-protobuf
@@ -31,11 +31,11 @@ services:
         volumes:
             - ./src/shared/proto/go/proto:/go/src/grpc-server/proto
 
-    vue-client:
+    react-client:
         build: ./src/client
-        container_name: vue-client
+        container_name: react-client
         volumes:
-            - ./src/shared/vue:/client
+            - ./src/shared/react:/client
 
     grpc-client:
         build: ./src/grpc-client
