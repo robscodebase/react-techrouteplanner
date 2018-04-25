@@ -1,7 +1,7 @@
-#  Docker Golang Protobuf MongoDB NPM Vuejs CoreUI
+#  Docker Golang GRPC Protobuf MongoDB NPM React CoreUI Webpack
 ## Technician Route Planner Demo App
 
-Docker Golang Protobuf MongoDB NPM Vuejs is created as a demo project for my portfolio.
+This is a demo project for my portfolio.
 If you are interested in hiring me for work please email me at robscodebase@gmail.com.
 
 Unless otherwise noted, these source files are distributed under the
@@ -31,8 +31,8 @@ You must have Docker and Docker-Compose installed on your machine.
 * Javascript
 * NPM
 * Webpack
-* Mapbox api
-* Vuejs
+* Mapbox
+* React
 * Docker
 * MongoDB
 * CoreUI
