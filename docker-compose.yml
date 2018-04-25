@@ -14,8 +14,8 @@ services:
             - golang-protobuf
         container_name: file-server
         volumes:
-            - ./src/shared/vue/dist:/go/src/technicianrouteplanner/src/templates
-            - ./src/shared/grpc-build:/go/src/technicianrouteplanner/src/grpc-build
+            - ./src/shared/react/build:/go/src/react-techrouteplanner/src/templates
+            - ./src/shared/grpc-build:/go/src/react-techrouteplanner/src/grpc-build
     db:
         image: mongo
         container_name: mongo
