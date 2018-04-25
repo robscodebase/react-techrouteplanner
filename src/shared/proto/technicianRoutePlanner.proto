@@ -1,0 +1,20 @@
+// Copyright (c) 2018 Robert Reyna. All rights reserved.
+// License BSD 3-Clause https://github.com/robscodebase/technicianrouteplanner/blob/master/LICENSE.md
+
+syntax = "proto3";
+
+package technicianRoutePlanner;
+
+service technicianRoutePlanner {
+rpc RoutePlanner(RoutePlannerRequest) returns (RoutePlannerReply) {}
+
+}
+
+message RoutePlannerRequest {
+    string routeName = 1;
+}
+
+message RoutePlannerReply {
+  repeated double coordinates = 1;
+  double sizeOfArray = 2;
+}

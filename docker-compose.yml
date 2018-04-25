@@ -1,0 +1,60 @@
+version: '3'
+
+services:
+    file-server:
+        build: ./src/file-server
+        ports:
+            - "8080:8080"
+        depends_on:
+            - db
+            - vue-client
+            - grpc-client
+            - grpc-server
+            - javascript-protobuf
+            - golang-protobuf
+        container_name: file-server
+        volumes:
+            - ./src/shared/vue/dist:/go/src/technicianrouteplanner/src/templates
+            - ./src/shared/grpc-build:/go/src/technicianrouteplanner/src/grpc-build
+    db:
+        image: mongo
+        container_name: mongo
+
+    grpc-server:
+        build: ./src/grpc-server
+        ports:
+            - "9090:9090"
+        depends_on:
+            - db
+            - golang-protobuf
+        container_name: grpc-server
+        volumes:
+            - ./src/shared/proto/go/proto:/go/src/grpc-server/proto
+
+    vue-client:
+        build: ./src/client
+        container_name: vue-client
+        volumes:
+            - ./src/shared/vue:/client
+
+    grpc-client:
+        build: ./src/grpc-client
+        depends_on:
+            - javascript-protobuf
+        volumes:
+            - ./src/shared/proto/js:/go/src/grpc-client/js/proto
+            - ./src/shared/grpc-build:/go/src/grpc-client/js/static
+
+    golang-protobuf:
+        build: ./src/protobufs/golang-protobuf
+        container_name: golang-protobuf
+        volumes:
+            - ./src/shared/proto:/go/src/golang-protobuf/proto
+            - ./src/shared/proto/go/proto:/go/src/golang-protobuf/go/proto
+
+    javascript-protobuf:
+        build: ./src/protobufs/javascript-protobuf
+        container_name: javascript-protobuf
+        volumes:
+            - ./src/shared/proto:/home/node/proto
+            - ./src/shared/proto/js:/home/node/js
