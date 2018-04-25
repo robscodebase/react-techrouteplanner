@@ -14,7 +14,7 @@ You must have Docker and Docker-Compose installed on your machine.
 
 
 ### Run Docker-Compose
-* Build can take up to 15 minutes.
+* Build can take several minutes.
 * Navigate to /react-techrouteplanner
   * `sudo docker-compose up`
 
