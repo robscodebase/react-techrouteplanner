@@ -1,5 +1,4 @@
 #  Docker Golang GRPC Protobuf MongoDB NPM React CoreUI Webpack
-## Technician Route Planner Demo App
 
 This is a demo project for my portfolio.
 If you are interested in hiring me for work please email me at robscodebase@gmail.com.
@@ -11,12 +10,12 @@ BSD-style license found in the LICENSE file.
 
 You must have Docker and Docker-Compose installed on your machine.
 * Clone repo.
-  * `git clone https://github.com/robscodebase/technicianrouteplanner.git`
+  * `git clone https://github.com/robscodebase/react-techrouteplanner.git`
 
 
 ### Run Docker-Compose
 
-* Navigate to /technicianrouteplanner
+* Navigate to /react-techrouteplanner
   * `sudo docker-compose up`
 
 ### View App
