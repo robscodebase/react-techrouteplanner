@@ -16,6 +16,7 @@ You must have Docker and Docker-Compose installed on your machine.
 ### Run Docker-Compose
 * Build can take several minutes and you may have to run build twice if you don't have the node modules in the shared directory.
 * Check the screenshot below to see what the finished build looks like in terminal.
+
 ![Route Planner Image 2](screenshots/finished-build.png) 
 * Navigate to /react-techrouteplanner
   * `sudo docker-compose up`
