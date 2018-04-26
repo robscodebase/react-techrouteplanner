@@ -1,6 +1,8 @@
 #  Docker Golang GRPC Protobuf MongoDB NPM React CoreUI Webpack
 
 This is a demo project for my portfolio.
+This project was derived from https://github.com/robscodebase/technicianrouteplanner
+The original project used Vue for the front end client.
 If you are interested in hiring me for work please email me at robscodebase@gmail.com.
 
 Unless otherwise noted, these source files are distributed under the
