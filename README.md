@@ -23,7 +23,7 @@ You must have Docker and Docker-Compose installed on your machine.
 
 ### View App
 
-* Open browser and navigate to localhost:8080/
+* Open browser and navigate to http://localhost:8080/#/dashboard
 
 ### Included Languages.
 * Golang
