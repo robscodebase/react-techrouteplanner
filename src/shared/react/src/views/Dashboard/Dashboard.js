@@ -462,7 +462,7 @@ const mainChartOpts = {
 };
 const divStyle = {
   height: "400px",
-  width: 100%
+  width: "100%"
 };
 class Dashboard extends Component {
   constructor(props) {
