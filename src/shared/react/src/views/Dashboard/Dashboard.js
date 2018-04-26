@@ -460,7 +460,10 @@ const mainChartOpts = {
     },
   },
 };
-
+const divStyle = {
+  height: "400px",
+  width: 100%
+};
 class Dashboard extends Component {
   constructor(props) {
     super(props);
@@ -491,7 +494,13 @@ class Dashboard extends Component {
     return (
       <div className="animated fadeIn">
         <Row>
-          <Col xs="12" sm="6" lg="3">
+        <Col sm="12">
+            <CardBody className="p-0">
+            </CardBody>
+            <Card className="chart-wrapper px-0" style={divStyle} id="map">
+            </Card>
+        </Col>
+        <Col xs="12" sm="6" lg="3">
             <Card className="text-white bg-info">
               <CardBody className="pb-0">
                 <ButtonGroup className="float-right">
